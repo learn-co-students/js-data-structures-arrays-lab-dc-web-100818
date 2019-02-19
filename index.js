@@ -3,37 +3,38 @@
 const drivers = ["Milo", "Otis", "Garfield"]
 
 function destructivelyAppendDriver(name) {
-  return drivers.push(name)
+drivers.push(name)
 }
-
 function destructivelyPrependDriver(name) {
-  return drivers.unshift(name)
+drivers.unshift(name)
 }
 
 function destructivelyRemoveLastDriver() {
-  return drivers.pop();
+drivers.pop()
 }
 
 function destructivelyRemoveFirstDriver(){
-  return drivers.shift();
+drivers.shift()
 }
 
 function appendDriver(name) {
-  const newArr = [...drivers, name];
-  return newArr
+ let coolArray = drivers.slice()
+ let anotherCool = [...coolArray, name]
+
+ return anotherCool;
+
 }
 
 function prependDriver(name) {
-  const newArr = [name, ...drivers]
-  return newArr
+  return [name, ...drivers]
+
 }
 
 function removeLastDriver() {
-  const newArr = drivers.slice(0,drivers.length-1)
-  return newArr;
+  return drivers.slice(0, -1)
 }
 
 function removeFirstDriver() {
-  const newArr = drivers.slice(1)
-  return newArr;
+  return drivers.slice(1)
+
 }
